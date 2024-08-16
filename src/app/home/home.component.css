@@ -1,0 +1,56 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.search-container {
+  position: relative;
+  width: 300px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.search-container h3 {
+  text-align: center;
+}
+
+.search-field {
+  width: 100%;
+}
+
+.countries-list-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  background: white;
+  z-index: 1;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 0 10px;
+}
+
+.countries-list-container mat-list-item {
+  padding: 5px 0;
+}
+
+.random-countries-container h3 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.random-countries-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.country-card {
+  width: 300px;
+}

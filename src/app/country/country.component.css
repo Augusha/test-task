@@ -1,0 +1,35 @@
+.country-container {
+  padding: 40px 10%;
+}
+
+.country-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.year-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.year-buttons button {
+  margin: 5px;
+}
+
+.year-buttons .selected-year {
+  background-color: #1976d2;
+  color: white;
+}
+
+.holidays-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.holiday-card {
+  width: 300px;
+}

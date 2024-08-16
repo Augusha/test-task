@@ -1,0 +1,49 @@
+<div class="main-container">
+  <div class="search-container">
+    <h3>Find Your Country!</h3>
+    <mat-form-field appearance="outline" class="search-field">
+      <mat-label>Search</mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="searchQuery"
+        (keyup)="getFilteredCountries()"
+        (focus)="onFocus()"
+        (blur)="onBlur()"
+      />
+    </mat-form-field>
+    <div
+      class="countries-list-container"
+      *ngIf="isInputFocused && !isCountriesNotFound"
+    >
+      <mat-list>
+        <mat-list-item *ngFor="let country of filteredCountries">
+          <a
+            mat-button
+            (click)="navigateToCountry(country.countryCode)"
+            (keyup.enter)="navigateToCountry(country.countryCode)"
+            tabindex="0"
+            style="width: 100%"
+          >{{ country.name }}</a
+          >
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+  <div class="random-countries-container">
+    <h3>Countries and Their Next Holidays</h3>
+    <div class="random-countries-cards">
+      <mat-card
+        *ngFor="let country of randomCountries"
+        class="country-card"
+        appearance="outlined"
+      >
+        <mat-card-content>
+          <div><strong>Country:</strong> {{ country.countryName }}</div>
+          <div><strong>Holiday:</strong> {{ country.name }}</div>
+          <div><strong>Date:</strong> {{ country.date | date }}</div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

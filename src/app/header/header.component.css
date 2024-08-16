@@ -1,0 +1,12 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  background-color: #95b3d5;
+  gap: 5px;
+}
+
+.header-title {
+  font-size: 18px;
+}

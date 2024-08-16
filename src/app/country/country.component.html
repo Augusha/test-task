@@ -1,0 +1,32 @@
+<div class="country-container">
+  <div class="country-info">
+    <h2>{{ countryInfo.commonName }}</h2>
+    <p><strong>Official Name:</strong> {{ countryInfo.officialName }}</p>
+    <p><strong>Region:</strong> {{ countryInfo.region }}</p>
+  </div>
+
+  <div class="year-buttons">
+    <button
+      mat-button
+      *ngFor="let year of years"
+      (click)="switchYear(year)"
+      [ngClass]="{ 'selected-year': isSelectedYear(year) }">
+      {{ year }}
+    </button>
+  </div>
+
+  <div class="holidays-list">
+    <mat-card
+      *ngFor="let holiday of holidays"
+      appearance="outlined"
+      class="holiday-card"
+    >
+      <mat-card-content>
+        <div><strong>Name:</strong> {{ holiday.name }}</div>
+        <div><strong>Local name:</strong> {{ holiday.localName }}</div>
+        <div><strong>Date:</strong> {{ holiday.date | date }}</div>
+        <div><strong>Type:</strong> {{ holiday.types }}</div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

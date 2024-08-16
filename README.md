@@ -1,5 +1,15 @@
 # TestTask
 
+## Overview
+
+TestTask is an Angular application that displays information about countries and their public holidays. It uses the Nager.Date API to fetch data.
+
+## Features
+
+- Search for countries and view their public holidays.
+- Switch between different years to see holidays for that year.
+- Responsive design using Angular Material.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
 
 ## Development server
